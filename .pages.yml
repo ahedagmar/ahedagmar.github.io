@@ -33,10 +33,7 @@ content:
   type: file
   path: content/projects.json
   format: json
-  list:
-    collapsible:
-      collapsed: true
-      summary: '{title} — {year}'
+  list: true
   fields:
   - name: published
     type: boolean
@@ -99,10 +96,7 @@ content:
   type: file
   path: content/news.json
   format: json
-  list:
-    collapsible:
-      collapsed: true
-      summary: '{title} — {date}'
+  list: true
   fields:
   - name: title
     type: string
@@ -157,10 +151,7 @@ content:
   type: file
   path: content/notebook.json
   format: json
-  list:
-    collapsible:
-      collapsed: true
-      summary: '{title} — {date}'
+  list: true
   fields:
   - name: title
     type: string
