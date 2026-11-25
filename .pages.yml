@@ -1,51 +1,47 @@
+Sí, exactamente. **Hay que actualizar directamente Configuration dentro de Pages CMS.** Actualizar el diseño de la página no es suficiente para que aparezcan los nuevos campos del editor.
 
-media:
-  input: images
-  output: /images
+Acabo de comprobar que el ZIP de la V10 contiene el archivo de configuración `.pages.yml`.
 
-content:
-  - name: site
-    label: About & Site Information
-    type: file
-    path: content/site.json
-    format: json
-    fields:
-      - {name: name, type: string}
-      - {name: location, type: string}
-      - {name: portrait, type: image}
-      - {name: bio, type: text}
-      - {name: email, type: string}
+### **Haz lo siguiente:**
 
-  - name: projects
-    label: Projects
-    type: file
-    path: content/projects.json
-    format: json
-    list: true
-    fields:
-      - {name: title, type: string}
-      - {name: slug, type: string}
-      - {name: year, type: string}
-      - {name: category, type: string}
-      - {name: description, type: text}
-      - {name: credits, type: text}
-      - {name: cover, type: image}
-      - name: gallery
-        type: object
-        list: true
-        fields:
-          - {name: image, type: image}
-          - {name: caption, type: string}
-      - {name: published, type: boolean}
+1. Descarga únicamente la configuración V10 (.yml).
+2. Abre el archivo con el Bloc de notas.
+3. Copia todo el código.
+4. Entra a [Pages CMS](https://app.pagescms.org/?utm_source=chatgpt.com).
+5. Abre **Configuration**.
+6. Reemplaza toda la configuración anterior por la nueva.
+7. Presiona **Save** y refresca la página.
 
-  - name: news
-    label: News & Exhibitions
-    type: file
-    path: content/news.json
-    format: json
-    list: true
-    fields:
-      - {name: title, type: string}
-      - {name: date, type: date}
-      - {name: description, type: text}
-      - {name: published, type: boolean}
+### **¿Qué debería aparecer ahora?**
+
+**Home & About — separate biographies**
+
+&#x20;Homepage photograph
+
+&#x20;HOME — short biography
+
+&#x20;ABOUT — full biography
+
+&#x20;About photograph
+
+&#x20;Homepage project list heading
+
+&#x20;Public contact email
+
+&#x20;Instagram
+
+&#x20;CV PDF
+
+&#x20;Education
+
+&#x20;Professional experience
+
+&#x20;Awards
+
+&#x20;Workshops
+
+Además, se actualizarán los campos de Projects y News & Exhibitions.
+
+He comprobado que esta configuración es exactamente la que viene en el ZIP de la V10. Todavía no puedo confirmar que esté activa en tu CMS.
+
+**No tienes que volver a subir ningún otro archivo a GitHub.** Reemplazar la configuración no sobrescribe por sí mismo tus fotografías ni los contenidos existentes.
