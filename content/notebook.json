@@ -19,5 +19,18 @@
     "show_date": false,
     "text": "lololo",
     "published": true
+  },
+  {
+    "title": "llslls",
+    "date": "2026-11-25",
+    "show_date": true,
+    "gallery": [
+      {
+        "image": "/images/Gelsenkirchen_Poverty_2023.png"
+      }
+    ],
+    "size": "medium",
+    "alignment": "right",
+    "published": true
   }
 ]
