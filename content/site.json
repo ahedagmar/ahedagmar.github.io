@@ -2,5 +2,8 @@
   "name": "Dagmar von der Ahe",
   "location": "Düsseldorf, DE",
   "portrait": "/images/61ab5664251685784ce6b1b6153fe130.jpg",
-  "bio": "Chilean artist and architectural designer based in Düsseldorf. Studied architecture and urbanism at Universidad Austral de Chile and currently studies Baukunst at Kunstakademie Düsseldorf."
+  "bio": "Chilean artist and architectural designer based in Düsseldorf. Studied architecture and urbanism at Universidad Austral de Chile and currently studies Baukunst at Kunstakademie Düsseldorf.",
+  "education": [
+    {}
+  ]
 }
