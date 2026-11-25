@@ -34,7 +34,7 @@ content:
     label: About photograph (optional)
   - name: works_heading
     type: string
-    label: Homepage project list heading
+    label: Homepage project list heading (Here)
   - name: instagram
     type: string
   - name: cv
@@ -145,11 +145,11 @@ content:
   - name: pdf
     type: file
   - name: selected
-    label: Selected work — include on homepage
+    label: Show on homepage
     type: boolean
     default: true
 - name: news
-  label: News & exhibitions
+  label: Updates — exhibitions & publications
   type: file
   path: content/news.json
   format: json
