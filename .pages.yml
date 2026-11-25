@@ -38,6 +38,13 @@ content:
       collapsed: true
       summary: '{title} — {year}'
   fields:
+  - name: published
+    type: boolean
+    label: Published
+  - name: selected
+    label: Selected
+    type: boolean
+    default: true
   - name: title
     type: string
     required: true
@@ -49,13 +56,33 @@ content:
     type: string
   - name: category
     type: string
-  - name: description
-    type: text
+  - name: location
+    type: string
+  - name: institution
+    type: string
+  - name: collaborators
+    type: string
+  - name: material
+    type: string
+  - name: dimensions
+    type: string
+  - name: status
+    type: string
+  - name: photography
+    type: string
   - name: credits
     type: text
+  - name: description
+    type: text
+  - name: external_link
+    type: string
+  - name: pdf
+    type: file
   - name: cover
     type: image
     label: Cover photograph
+  - name: cover_caption
+    type: string
   - name: gallery
     type: object
     list:
@@ -67,33 +94,6 @@ content:
       type: image
     - name: caption
       type: string
-  - name: published
-    type: boolean
-    label: Show on website
-  - name: location
-    type: string
-  - name: collaborators
-    type: string
-  - name: institution
-    type: string
-  - name: material
-    type: string
-  - name: dimensions
-    type: string
-  - name: status
-    type: string
-  - name: photography
-    type: string
-  - name: external_link
-    type: string
-  - name: cover_caption
-    type: string
-  - name: pdf
-    type: file
-  - name: selected
-    label: Show on homepage
-    type: boolean
-    default: true
 - name: news
   label: Updates
   type: file
