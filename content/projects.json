@@ -5,9 +5,7 @@
     "year": "2026",
     "category": "Objects",
     "description": "An exploration of discarded steel cylinders and their transformation into functional art objects.",
-    "credits": "",
-    "cover": "",
-    "gallery": [],
+    "cover": "/images/IMG_20261124_145118201.jpg",
     "published": true
   },
   {
@@ -16,9 +14,7 @@
     "year": "2026",
     "category": "Spatial research",
     "description": "A spatial investigation into waiting and welcome at the immigration office in Düsseldorf.",
-    "credits": "",
-    "cover": "",
-    "gallery": [],
+    "cover": "/images/239631155_1695379531_v16_9_1600.webp",
     "published": true
   },
   {
@@ -27,9 +23,6 @@
     "year": "2026",
     "category": "Installation",
     "description": "A spatial intervention exploring boundaries within a former guardhouse.",
-    "credits": "",
-    "cover": "",
-    "gallery": [],
     "published": true
   },
   {
@@ -38,9 +31,6 @@
     "year": "2026",
     "category": "Architecture",
     "description": "Architectural study of a central railway station in Athens.",
-    "credits": "",
-    "cover": "",
-    "gallery": [],
     "published": true
   },
   {
@@ -49,9 +39,6 @@
     "year": "2022",
     "category": "Architecture",
     "description": "An architectural project exploring the relationship between the city and its river.",
-    "credits": "",
-    "cover": "",
-    "gallery": [],
     "published": true
   }
 ]
