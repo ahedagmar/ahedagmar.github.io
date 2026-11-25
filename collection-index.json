@@ -1,0 +1,9 @@
+---
+layout: null
+---
+{
+{% assign groups = 'projects,news,notebook' | split: ',' %}
+{% for group in groups %}
+{{ group | jsonify }}: [ {% assign prefix = '/content/' | append: group | append: '/' %}{% assign first = true %}{% for f in site.static_files %}{% assign start = f.path | slice: 0, prefix.size %}{% if start == prefix and f.extname == '.json' %}{% unless first %},{% endunless %}{{ f.path | relative_url | jsonify }}{% assign first = false %}{% endif %}{% endfor %} ]{% unless forloop.last %},{% endunless %}
+{% endfor %}
+}

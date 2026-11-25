@@ -1,0 +1,10 @@
+{
+  "page_margin": 3,
+  "image_gap": 6,
+  "gallery_white": 50,
+  "works_columns": 4,
+  "home_overlap": 20,
+  "home_images": 0,
+  "floating_question": true,
+  "custom_cursor": true
+}
