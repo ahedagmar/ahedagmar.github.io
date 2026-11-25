@@ -24,7 +24,8 @@
     "dimensions": "GDG",
     "status": "DHDF",
     "photography": "SDHF",
-    "cover_caption": "SHF"
+    "cover_caption": "SHF",
+    "selected": false
   },
   {
     "title": "Stories of Waiting",
@@ -33,7 +34,8 @@
     "category": "Spatial research",
     "description": "A spatial investigation into waiting and welcome at the immigration office in Düsseldorf.",
     "cover": "/images/239631155_1695379531_v16_9_1600.webp",
-    "published": true
+    "published": true,
+    "selected": true
   },
   {
     "title": "Die verrutschte Grenze",
@@ -41,7 +43,8 @@
     "year": "2026",
     "category": "Installation",
     "description": "A spatial intervention exploring boundaries within a former guardhouse.",
-    "published": true
+    "published": true,
+    "selected": true
   },
   {
     "title": "Athens Central Station",
@@ -49,7 +52,8 @@
     "year": "2026",
     "category": "Architecture",
     "description": "Architectural study of a central railway station in Athens.",
-    "published": true
+    "published": true,
+    "selected": true
   },
   {
     "title": "Valdivia Cultural Centre",
@@ -57,6 +61,7 @@
     "year": "2022",
     "category": "Architecture",
     "description": "An architectural project exploring the relationship between the city and its river.",
-    "published": true
+    "published": true,
+    "selected": true
   }
 ]
