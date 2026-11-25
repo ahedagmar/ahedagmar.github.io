@@ -33,7 +33,10 @@ content:
   type: file
   path: content/projects.json
   format: json
-  list: true
+  list:
+    collapsible:
+      collapsed: true
+      summary: '{title} — {year}'
   fields:
   - name: title
     type: string
@@ -55,7 +58,10 @@ content:
     label: Cover photograph
   - name: gallery
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{image}'
     fields:
     - name: image
       type: image
@@ -93,7 +99,10 @@ content:
   type: file
   path: content/news.json
   format: json
-  list: true
+  list:
+    collapsible:
+      collapsed: true
+      summary: '{title} — {date}'
   fields:
   - name: title
     type: string
@@ -132,7 +141,10 @@ content:
     type: image
   - name: gallery
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{image}'
     fields:
     - name: image
       type: image
@@ -145,7 +157,10 @@ content:
   type: file
   path: content/notebook.json
   format: json
-  list: true
+  list:
+    collapsible:
+      collapsed: true
+      summary: '{title} — {date}'
   fields:
   - name: title
     type: string
@@ -153,11 +168,15 @@ content:
     type: date
   - name: show_date
     type: boolean
+    label: Show date
   - name: text
     type: text
   - name: gallery
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{image}'
     fields:
     - name: image
       type: image
@@ -167,16 +186,35 @@ content:
     type: select
     options:
       values:
+      - extra-small
       - small
       - medium
       - large
+      - extra-large
+    label: Image size
+    default: medium
   - name: alignment
     type: select
     options:
       values:
+      - auto
       - left
       - centre
       - right
+    label: Position
+    default: auto
+  - name: overlap
+    label: Maximum overlap (%)
+    type: select
+    default: '10'
+    options:
+      values:
+      - '0'
+      - '5'
+      - '10'
+      - '15'
+      - '20'
+    description: Only image-only posts can overlap. Text and captions remain clear.
   - name: external_link
     type: string
   - name: published
@@ -210,7 +248,10 @@ content:
     label: CV PDF
   - name: education
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
@@ -222,7 +263,10 @@ content:
       type: text
   - name: experience
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
@@ -234,7 +278,10 @@ content:
       type: text
   - name: awards
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
@@ -246,7 +293,10 @@ content:
       type: text
   - name: workshops
     type: object
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
