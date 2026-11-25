@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Do Not Refill",
+    "slug": "do-not-refill",
+    "year": "2026",
+    "category": "Objects",
+    "description": "An exploration of discarded steel cylinders and their transformation into functional art objects.",
+    "credits": "",
+    "cover": "",
+    "gallery": [],
+    "published": true
+  },
+  {
+    "title": "Stories of Waiting",
+    "slug": "stories-of-waiting",
+    "year": "2026",
+    "category": "Spatial research",
+    "description": "A spatial investigation into waiting and welcome at the immigration office in Düsseldorf.",
+    "credits": "",
+    "cover": "",
+    "gallery": [],
+    "published": true
+  },
+  {
+    "title": "Die verrutschte Grenze",
+    "slug": "wachhaus",
+    "year": "2026",
+    "category": "Installation",
+    "description": "A spatial intervention exploring boundaries within a former guardhouse.",
+    "credits": "",
+    "cover": "",
+    "gallery": [],
+    "published": true
+  },
+  {
+    "title": "Athens Central Station",
+    "slug": "athens",
+    "year": "2026",
+    "category": "Architecture",
+    "description": "Architectural study of a central railway station in Athens.",
+    "credits": "",
+    "cover": "",
+    "gallery": [],
+    "published": true
+  },
+  {
+    "title": "Valdivia Cultural Centre",
+    "slug": "valdivia",
+    "year": "2022",
+    "category": "Architecture",
+    "description": "An architectural project exploring the relationship between the city and its river.",
+    "credits": "",
+    "cover": "",
+    "gallery": [],
+    "published": true
+  }
+]
