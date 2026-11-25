@@ -11,6 +11,17 @@ content:
   - name: portrait
     type: image
     label: Homepage photograph
+  - name: portrait_size
+    label: Homepage photograph size
+    type: select
+    default: L
+    options:
+      values:
+      - XS
+      - S
+      - M
+      - L
+      - XL
   - name: short_bio
     type: text
     label: HOME — short biography
@@ -78,7 +89,7 @@ content:
     type: boolean
     default: true
 - name: news
-  label: Updates — exhibitions & publications
+  label: Updates
   type: file
   path: content/news.json
   format: json
@@ -95,15 +106,8 @@ content:
     type: boolean
     label: Show on website
   - name: type
-    type: select
-    options:
-      values:
-      - Exhibition
-      - Publication
-      - Workshop
-      - Residency
-      - Award
-      - Other
+    type: string
+    label: Category (e.g. Exhibition, Publication, Presentation, Workshop)
   - name: end_date
     type: date
   - name: location
