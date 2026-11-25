@@ -17,7 +17,14 @@
         "image": "/images/IMG_20261124_145118201-1.jpg"
       }
     ],
-    "published": true
+    "published": true,
+    "location": "Düsseldorf",
+    "collaborators": "JOL LONM",
+    "material": "METAL",
+    "dimensions": "GDG",
+    "status": "DHDF",
+    "photography": "SDHF",
+    "cover_caption": "SHF"
   },
   {
     "title": "Stories of Waiting",
