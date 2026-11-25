@@ -1,47 +1,257 @@
-Sí, exactamente. **Hay que actualizar directamente Configuration dentro de Pages CMS.** Actualizar el diseño de la página no es suficiente para que aparezcan los nuevos campos del editor.
+media:
+  input: images
+  output: /images
 
-Acabo de comprobar que el ZIP de la V10 contiene el archivo de configuración `.pages.yml`.
+content:
+  - name: site
+    label: Home & About — separate biographies
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: name
+        type: string
+        label: Name
 
-### **Haz lo siguiente:**
+      - name: location
+        type: string
+        label: Location
 
-1. Descarga únicamente la configuración V10 (.yml).
-2. Abre el archivo con el Bloc de notas.
-3. Copia todo el código.
-4. Entra a [Pages CMS](https://app.pagescms.org/?utm_source=chatgpt.com).
-5. Abre **Configuration**.
-6. Reemplaza toda la configuración anterior por la nueva.
-7. Presiona **Save** y refresca la página.
+      - name: portrait
+        type: image
+        label: Homepage photograph
 
-### **¿Qué debería aparecer ahora?**
+      - name: bio
+        type: text
+        label: Legacy biography (fallback for existing content)
 
-**Home & About — separate biographies**
+      - name: email
+        type: string
+        label: Public contact email
 
-&#x20;Homepage photograph
+      - name: short_bio
+        type: text
+        label: HOME — short biography
 
-&#x20;HOME — short biography
+      - name: full_bio
+        type: text
+        label: ABOUT — full biography
 
-&#x20;ABOUT — full biography
+      - name: about_portrait
+        type: image
+        label: About photograph (optional)
 
-&#x20;About photograph
+      - name: works_heading
+        type: string
+        label: Homepage project list heading
 
-&#x20;Homepage project list heading
+      - name: instagram
+        type: string
 
-&#x20;Public contact email
+      - name: cv
+        type: file
+        label: CV PDF
 
-&#x20;Instagram
+      - name: education
+        type: object
+        list: true
+        fields:
+          - name: year
+            type: string
+          - name: title
+            type: string
+          - name: institution
+            type: string
+          - name: description
+            type: text
 
-&#x20;CV PDF
+      - name: experience
+        type: object
+        list: true
+        fields:
+          - name: year
+            type: string
+          - name: title
+            type: string
+          - name: institution
+            type: string
+          - name: description
+            type: text
 
-&#x20;Education
+      - name: awards
+        type: object
+        list: true
+        fields:
+          - name: year
+            type: string
+          - name: title
+            type: string
+          - name: institution
+            type: string
+          - name: description
+            type: text
 
-&#x20;Professional experience
+      - name: workshops
+        type: object
+        list: true
+        fields:
+          - name: year
+            type: string
+          - name: title
+            type: string
+          - name: institution
+            type: string
+          - name: description
+            type: text
 
-&#x20;Awards
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        type: string
+        required: true
 
-&#x20;Workshops
+      - name: slug
+        type: string
+        required: true
+        label: Unique URL name (lowercase and hyphens)
 
-Además, se actualizarán los campos de Projects y News & Exhibitions.
+      - name: year
+        type: string
 
-He comprobado que esta configuración es exactamente la que viene en el ZIP de la V10. Todavía no puedo confirmar que esté activa en tu CMS.
+      - name: category
+        type: string
 
-**No tienes que volver a subir ningún otro archivo a GitHub.** Reemplazar la configuración no sobrescribe por sí mismo tus fotografías ni los contenidos existentes.
+      - name: description
+        type: text
+
+      - name: credits
+        type: text
+
+      - name: cover
+        type: image
+        label: Cover photograph
+
+      - name: gallery
+        type: object
+        list: true
+        fields:
+          - name: image
+            type: image
+          - name: caption
+            type: string
+
+      - name: published
+        type: boolean
+        label: Show on website
+
+      - name: location
+        type: string
+
+      - name: collaborators
+        type: string
+
+      - name: institution
+        type: string
+
+      - name: material
+        type: string
+
+      - name: dimensions
+        type: string
+
+      - name: status
+        type: string
+
+      - name: photography
+        type: string
+
+      - name: external_link
+        type: string
+
+      - name: cover_caption
+        type: string
+
+      - name: pdf
+        type: file
+
+  - name: news
+    label: News & exhibitions
+    type: file
+    path: content/news.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        type: string
+        required: true
+
+      - name: date
+        type: date
+
+      - name: description
+        type: text
+
+      - name: published
+        type: boolean
+        label: Show on website
+
+      - name: type
+        type: select
+        options:
+          values:
+            - Exhibition
+            - Publication
+            - Workshop
+            - Residency
+            - Award
+            - Other
+
+      - name: end_date
+        type: date
+
+      - name: location
+        type: string
+
+      - name: institution
+        type: string
+
+      - name: venue
+        type: string
+
+      - name: participants
+        type: string
+
+      - name: curator
+        type: string
+
+      - name: publisher
+        type: string
+
+      - name: credits
+        type: string
+
+      - name: external_link
+        type: string
+
+      - name: cover_caption
+        type: string
+
+      - name: cover
+        type: image
+
+      - name: gallery
+        type: object
+        list: true
+        fields:
+          - name: image
+            type: image
+          - name: caption
+            type: string
+
+      - name: pdf
+        type: file
