@@ -30,14 +30,14 @@ content:
     label: Homepage project list heading (Here)
 - name: projects
   label: Projects
-  type: collection
-  path: content/projects
+  type: file
+  path: content/projects.json
   format: json
+  list: true
   fields:
   - name: published
     type: boolean
     label: Published
-    default: true
   - name: selected
     label: Selected
     type: boolean
@@ -53,7 +53,6 @@ content:
     type: string
   - name: category
     type: string
-    label: Categories (comma separated)
   - name: location
     type: string
   - name: institution
@@ -81,69 +80,23 @@ content:
     label: Cover photograph
   - name: cover_caption
     type: string
-  - name: hover_cover
-    type: image
-    label: Alternative cover on hover
-  - name: home_cover
-    type: image
-    label: Homepage cover
-  - name: related
-    type: string
-    label: Related project slugs (comma separated)
-  - name: homepage_priority
-    type: number
-    label: Homepage priority
-    default: 0
   - name: gallery
     type: object
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.image}'
+        summary: '{image}'
     fields:
     - name: image
       type: image
     - name: caption
       type: string
-    - name: video
-      type: file
-      label: Video (optional)
-    - name: alt
-      type: string
-      label: Alternative text
-    - name: layout
-      type: select
-      options:
-        values:
-        - auto
-        - full
-        - half
-      default: auto
-  filename:
-    template: '{fields.slug}.json'
-    field: create
-  view:
-    fields:
-    - title
-    - year
-    - published
-    primary: title
-    sort:
-    - title
-    - year
-    search:
-    - title
-    default:
-      sort: year
-      order: desc
-  exclude:
-  - README.md
-  subfolders: false
 - name: news
   label: Updates
-  type: collection
-  path: content/news
+  type: file
+  path: content/news.json
   format: json
+  list: true
   fields:
   - name: title
     type: string
@@ -155,7 +108,6 @@ content:
   - name: published
     type: boolean
     label: Show on website
-    default: true
   - name: type
     type: string
     label: Category (e.g. Exhibition, Publication, Presentation, Workshop)
@@ -186,53 +138,20 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.image}'
+        summary: '{image}'
     fields:
     - name: image
       type: image
     - name: caption
       type: string
-    - name: video
-      type: file
-      label: Video (optional)
-    - name: alt
-      type: string
-      label: Alternative text
-    - name: layout
-      type: select
-      options:
-        values:
-        - auto
-        - full
-        - half
-      default: auto
   - name: pdf
     type: file
-  filename:
-    template: '{year}-{month}-{day}-{hour}-{minute}-{second}-{primary}.json'
-    field: create
-  view:
-    fields:
-    - title
-    - date
-    - published
-    primary: title
-    sort:
-    - title
-    - date
-    search:
-    - title
-    default:
-      sort: date
-      order: desc
-  exclude:
-  - README.md
-  subfolders: false
 - name: notebook
   label: ¿? — Notebook
-  type: collection
-  path: content/notebook
+  type: file
+  path: content/notebook.json
   format: json
+  list: true
   fields:
   - name: title
     type: string
@@ -248,26 +167,12 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.image}'
+        summary: '{image}'
     fields:
     - name: image
       type: image
     - name: caption
       type: string
-    - name: video
-      type: file
-      label: Video (optional)
-    - name: alt
-      type: string
-      label: Alternative text
-    - name: layout
-      type: select
-      options:
-        values:
-        - auto
-        - full
-        - half
-      default: auto
   - name: size
     type: select
     options:
@@ -306,26 +211,6 @@ content:
   - name: published
     type: boolean
     default: true
-  filename:
-    template: '{year}-{month}-{day}-{hour}-{minute}-{second}-{primary}.json'
-    field: create
-  view:
-    fields:
-    - title
-    - date
-    - published
-    primary: title
-    sort:
-    - title
-    - date
-    search:
-    - title
-    default:
-      sort: date
-      order: desc
-  exclude:
-  - README.md
-  subfolders: false
 - name: about
   label: About
   type: file
@@ -357,7 +242,7 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.title} — {fields.year}'
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
@@ -372,7 +257,7 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.title} — {fields.year}'
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
@@ -387,7 +272,7 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.title} — {fields.year}'
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
@@ -402,7 +287,7 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.title} — {fields.year}'
+        summary: '{title} — {year}'
     fields:
     - name: year
       type: string
@@ -412,44 +297,3 @@ content:
       type: string
     - name: description
       type: text
-- name: website_settings
-  label: Website settings
-  type: file
-  path: content/settings.json
-  format: json
-  fields:
-  - name: page_margin
-    label: Page margin (% of viewport)
-    type: number
-    default: 3
-  - name: image_gap
-    label: Image gap
-    type: number
-    default: 6
-  - name: gallery_white
-    label: Gallery white
-    type: number
-    default: 50
-  - name: works_columns
-    label: Works columns
-    type: number
-    default: 4
-  - name: home_overlap
-    label: Home overlap
-    type: number
-    default: 20
-  - name: home_images
-    label: Home image count (0 = automatic)
-    type: number
-    default: 0
-  - name: floating_question
-    label: Floating question
-    type: boolean
-    default: true
-  - name: custom_cursor
-    label: Custom cursor
-    type: boolean
-    default: true
-settings:
-  content:
-    merge: true
