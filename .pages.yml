@@ -2,92 +2,21 @@ media:
   input: images
   output: /images
 content:
-- name: site
-  label: Home & About — separate biographies
+- name: home
+  label: Home
   type: file
-  path: content/site.json
+  path: content/home.json
   format: json
   fields:
-  - name: name
-    type: string
-    label: Name
-  - name: location
-    type: string
-    label: Location
   - name: portrait
     type: image
     label: Homepage photograph
-  - name: bio
-    type: text
-    label: Legacy biography (fallback for existing content)
-  - name: email
-    type: string
-    label: Public contact email
   - name: short_bio
     type: text
     label: HOME — short biography
-  - name: full_bio
-    type: text
-    label: ABOUT — full biography
-  - name: about_portrait
-    type: image
-    label: About photograph (optional)
   - name: works_heading
     type: string
     label: Homepage project list heading (Here)
-  - name: instagram
-    type: string
-  - name: cv
-    type: file
-    label: CV PDF
-  - name: education
-    type: object
-    list: true
-    fields:
-    - name: year
-      type: string
-    - name: title
-      type: string
-    - name: institution
-      type: string
-    - name: description
-      type: text
-  - name: experience
-    type: object
-    list: true
-    fields:
-    - name: year
-      type: string
-    - name: title
-      type: string
-    - name: institution
-      type: string
-    - name: description
-      type: text
-  - name: awards
-    type: object
-    list: true
-    fields:
-    - name: year
-      type: string
-    - name: title
-      type: string
-    - name: institution
-      type: string
-    - name: description
-      type: text
-  - name: workshops
-    type: object
-    list: true
-    fields:
-    - name: year
-      type: string
-    - name: title
-      type: string
-    - name: institution
-      type: string
-    - name: description
-      type: text
 - name: projects
   label: Projects
   type: file
@@ -249,3 +178,77 @@ content:
   - name: published
     type: boolean
     default: true
+- name: about
+  label: About
+  type: file
+  path: content/about.json
+  format: json
+  fields:
+  - name: name
+    type: string
+    label: Name
+  - name: location
+    type: string
+    label: Location
+  - name: about_portrait
+    type: image
+    label: About photograph (optional)
+  - name: full_bio
+    type: text
+    label: ABOUT — full biography
+  - name: email
+    type: string
+    label: Public contact email
+  - name: instagram
+    type: string
+  - name: cv
+    type: file
+    label: CV PDF
+  - name: education
+    type: object
+    list: true
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
+  - name: experience
+    type: object
+    list: true
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
+  - name: awards
+    type: object
+    list: true
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
+  - name: workshops
+    type: object
+    list: true
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
