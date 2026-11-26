@@ -38,5 +38,24 @@
     "year": "2026",
     "cover": "/images/1000233711.png",
     "homepage_priority": 0
+  },
+  {
+    "published": true,
+    "selected": true,
+    "title": "Ups alle Wände weg",
+    "cover": "/images/1000233712.jpg",
+    "homepage_priority": 0
+  },
+  {
+    "published": true,
+    "selected": true,
+    "title": "Moyland",
+    "cover": "/images/1000233714.jpg",
+    "homepage_priority": 0,
+    "gallery": [
+      {
+        "layout": "auto"
+      }
+    ]
   }
 ]
