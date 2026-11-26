@@ -43,6 +43,7 @@
     "published": true,
     "selected": true,
     "title": "Ups alle Wände weg",
+    "year": "2026",
     "cover": "/images/1000233712.jpg",
     "homepage_priority": 0
   },
@@ -50,6 +51,7 @@
     "published": true,
     "selected": true,
     "title": "Moyland",
+    "year": "2025",
     "cover": "/images/1000233714.jpg",
     "homepage_priority": 0,
     "gallery": [
@@ -57,5 +59,29 @@
         "layout": "auto"
       }
     ]
+  },
+  {
+    "published": true,
+    "selected": true,
+    "title": "Casa Pellchuquin ",
+    "year": "2023",
+    "cover": "/images/1000233720.png",
+    "homepage_priority": 0
+  },
+  {
+    "published": true,
+    "selected": true,
+    "title": "Humedales ",
+    "year": "2024",
+    "cover": "/images/1000233718.png",
+    "homepage_priority": 0
+  },
+  {
+    "published": true,
+    "selected": true,
+    "title": "El emerger de los vestigios ",
+    "year": "2022",
+    "cover": "/images/1000233716.png",
+    "homepage_priority": 0
   }
 ]
