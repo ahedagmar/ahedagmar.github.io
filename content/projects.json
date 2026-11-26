@@ -4,7 +4,7 @@
     "selected": true,
     "title": "Röhrenwurm",
     "year": "2024",
-    "category": "Instalation",
+    "category": "Installation ",
     "cover": "/images/DSCF2591.jpg",
     "homepage_priority": 0,
     "gallery": [
@@ -23,6 +23,7 @@
     "selected": true,
     "title": "oper am rhein",
     "year": "2024",
+    "category": "Architecture ",
     "cover": "/images/Captura de pantalla 2026-11-26 215803.png",
     "homepage_priority": 0,
     "gallery": [
@@ -36,6 +37,7 @@
     "selected": true,
     "title": "Waiting ",
     "year": "2026",
+    "category": "Installation ",
     "cover": "/images/1000233711.png",
     "homepage_priority": 0
   },
@@ -44,6 +46,7 @@
     "selected": true,
     "title": "Ups alle Wände weg",
     "year": "2026",
+    "category": "Architecture ",
     "cover": "/images/1000233712.jpg",
     "homepage_priority": 0
   },
@@ -52,6 +55,7 @@
     "selected": true,
     "title": "Moyland",
     "year": "2025",
+    "category": "Architecture ",
     "cover": "/images/1000233714.jpg",
     "homepage_priority": 0,
     "gallery": [
@@ -65,6 +69,7 @@
     "selected": true,
     "title": "Casa Pellchuquin ",
     "year": "2023",
+    "category": "Architecture ",
     "cover": "/images/1000233720.png",
     "homepage_priority": 0
   },
@@ -73,6 +78,7 @@
     "selected": true,
     "title": "Humedales ",
     "year": "2024",
+    "category": "Urbanism",
     "cover": "/images/1000233718.png",
     "homepage_priority": 0
   },
@@ -81,6 +87,7 @@
     "selected": true,
     "title": "El emerger de los vestigios ",
     "year": "2022",
+    "category": "Architecture ",
     "cover": "/images/1000233716.png",
     "homepage_priority": 0
   }
