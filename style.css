@@ -45,3 +45,24 @@ body{padding-left:var(--v17-margin,3vw);padding-right:var(--v17-margin,3vw)}.pro
 
 /* v18 */
 .about-page>h1{font-size:18px;letter-spacing:0;margin:0 0 16px} #lightbox{touch-action:pan-y pinch-zoom}#light-close{width:44px;height:44px;line-height:44px;font-size:26px} .youtube{width:100%;aspect-ratio:16/9;background:#f3f3f3;margin:18px 0;display:grid;place-items:center}.youtube iframe{width:100%;height:100%;border:0}.youtube-play{padding:12px 18px;text-decoration:underline}.home-grid .hover-title{background:transparent!important}@media(pointer:coarse){#light-prev,#light-next{display:none!important}#lightbox{padding:48px 48px}#light-image{max-width:calc(100vw - 96px);max-height:calc(100dvh - 115px)}}
+@keyframes gentleShake {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(3px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, 1px); }
+}
+
+body.home-page .wall-card img {
+  animation: gentleShake 1.8s ease-in-out infinite;
+}
+
+body.home-page .wall-card:nth-child(2n) img {
+  animation-delay: -0.7s;
+  animation-duration: 2.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home-page .wall-card img {
+    animation: none;
+  }
+}
