@@ -6,6 +6,16 @@
     "year": "2024",
     "category": "Instalation",
     "cover": "/images/DSCF2591.jpg",
-    "homepage_priority": 0
+    "homepage_priority": 0,
+    "gallery": [
+      {
+        "image": "/images/DSCF2506.jpg",
+        "layout": "auto"
+      },
+      {
+        "image": "/images/DSCF2601.jpg",
+        "layout": "auto"
+      }
+    ]
   }
 ]
