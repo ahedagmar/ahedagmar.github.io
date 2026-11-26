@@ -22,6 +22,12 @@
     "published": true,
     "selected": true,
     "title": "oper am rhein",
-    "homepage_priority": 0
+    "cover": "/images/Captura de pantalla 2026-11-26 215803.png",
+    "homepage_priority": 0,
+    "gallery": [
+      {
+        "layout": "auto"
+      }
+    ]
   }
 ]
