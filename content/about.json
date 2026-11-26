@@ -1,0 +1,29 @@
+{
+  "location": "Düsseldorf, DE",
+  "email": "ahe.dagmar@gmail.com",
+  "instagram": "@dagmar.ahe",
+  "education": [
+    {
+      "year": "2023-now",
+      "title": "Baukunst",
+      "institution": "Kunstakademie Düsseldorf"
+    },
+    {
+      "year": "2022",
+      "title": "Architecture",
+      "institution": "Universidad Austral de Chile"
+    }
+  ],
+  "experience": [
+    {
+      "year": "2025-now",
+      "title": "Werkstudent",
+      "institution": "Wollenberg Architects BDA"
+    },
+    {
+      "year": "2024-2025",
+      "title": "Architecture",
+      "institution": "Atelier Brum"
+    }
+  ]
+}
