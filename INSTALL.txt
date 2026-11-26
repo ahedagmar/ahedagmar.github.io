@@ -1,26 +1,9 @@
-V20 — ACTUALIZACIÓN SEGURA
-1. Copia de seguridad: https://github.com/dagmarvonderahe/dagmarvonderahe.github.io/archive/refs/heads/main.zip
-2. Reemplaza index.html, style.css y script.js en la raíz:
-   https://github.com/dagmarvonderahe/dagmarvonderahe.github.io/upload/main
-3. Pages CMS > Configuration (https://app.pagescms.org/):
-   usa cms/pages-legacy.yml si tus proyectos son Item 1, Item 2;
-   usa cms/pages-collections.yml SOLO si ya tienes proyectos en archivos
-   individuales y la migración previa funciona. No cambies de estructura
-   por instalar esta actualización. Pega el YAML elegido en Configuration.
-   En Gallery: Image o YouTube video (enlace), y Caption.
-   Las URLs existentes quedan conservadas; las nuevas se generan del título.
-4. Si todavía no tienes la optimización v18, instala opcionalmente
-   tools/optimize_images.py y .github/workflows/optimize-images.yml
-   en esas rutas. No hace falta reinstalarlos si ya existen.
-   Conserva originales fuera de GitHub: la compresión publicada es irreversible
-   salvo por la historia Git. No renombra archivos ni modifica formatos.
-   Puede requerir volver a ejecutar el workflow existente de publicación.
-5. No reemplaces content/, images/, collection-index.json ni settings.json.
-6. Comprueba que Actions termina y recarga la web:
-   https://github.com/dagmarvonderahe/dagmarvonderahe.github.io/actions
-   https://dagmarvonderahe.github.io/
-
-El temblor continuo se elimina; Home/Free reacciona al movimiento del ratón.
-La ficha de proyecto tiene texto y galería en columnas en escritorio.
-En móvil se permite scroll si hace falta y swipe en la galería.
-Los vídeos de YouTube no se descargan ni se cargan antes de pulsar Play.
+V22 — Actualización sin sustituir contenidos.
+Sube index.html, style.css y script.js:
+https://github.com/ahedagmar/ahedagmar.github.io/upload/main
+En https://app.pagescms.org/ > Configuration, pega cms/pages-legacy.yml
+si usas Item 1, Item 2; usa cms/pages-collections.yml únicamente si ya
+funciona la estructura de colecciones independientes. No migres ahora.
+No reemplaces content, images ni collection-index.json.
+https://github.com/ahedagmar/ahedagmar.github.io/actions
+https://ahedagmar.github.io/

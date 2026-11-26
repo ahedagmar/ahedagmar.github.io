@@ -81,15 +81,19 @@ content:
     label: Cover photograph
   - name: cover_caption
     type: string
+    hidden: true
   - name: hover_cover
     type: image
     label: Alternative cover on hover
+    hidden: true
   - name: home_cover
     type: image
     label: Homepage cover
+    hidden: true
   - name: related
     type: string
     label: Related project slugs (comma separated)
+    hidden: true
   - name: homepage_priority
     type: number
     label: Homepage priority
@@ -99,7 +103,7 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{caption}'
+        summary: '{image} {youtube_url}'
     fields:
     - name: image
       type: image
@@ -108,6 +112,7 @@ content:
       label: YouTube video (optional link)
     - name: caption
       type: string
+      hidden: true
     - name: video
       type: file
       label: Video (optional)
@@ -115,6 +120,7 @@ content:
     - name: alt
       type: string
       label: Alternative text
+      hidden: true
     - name: layout
       type: select
       options:
@@ -123,6 +129,7 @@ content:
         - full
         - half
       default: auto
+      hidden: true
   - name: youtube_url
     type: string
     label: YouTube URL (legacy)
@@ -365,6 +372,7 @@ content:
   - name: about_portrait
     type: image
     label: About photograph (optional)
+    hidden: true
   - name: full_bio
     type: text
     label: ABOUT — full biography
@@ -462,6 +470,7 @@ content:
     label: Home overlap
     type: number
     default: 20
+    hidden: true
   - name: home_images
     label: Home image count (0 = automatic)
     type: number
