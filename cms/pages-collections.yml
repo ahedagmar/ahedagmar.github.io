@@ -47,8 +47,8 @@ content:
     required: true
   - name: slug
     type: string
-    required: true
-    label: Unique URL name (lowercase and hyphens)
+    label: Legacy URL (preserved)
+    hidden: true
   - name: year
     type: string
   - name: category
@@ -99,10 +99,13 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.image}'
+        summary: '{caption}'
     fields:
     - name: image
       type: image
+    - name: youtube_url
+      type: string
+      label: YouTube video (optional link)
     - name: caption
       type: string
     - name: video
@@ -122,9 +125,10 @@ content:
       default: auto
   - name: youtube_url
     type: string
-    label: YouTube URL (optional)
+    label: YouTube URL (legacy)
+    hidden: true
   filename:
-    template: '{fields.slug}.json'
+    template: '{primary}.json'
     field: create
   view:
     fields:
@@ -190,10 +194,13 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.image}'
+        summary: '{caption}'
     fields:
     - name: image
       type: image
+    - name: youtube_url
+      type: string
+      label: YouTube video (optional link)
     - name: caption
       type: string
     - name: video
@@ -215,7 +222,8 @@ content:
     type: file
   - name: youtube_url
     type: string
-    label: YouTube URL (optional)
+    label: YouTube URL (legacy)
+    hidden: true
   filename:
     template: '{year}-{month}-{day}-{hour}-{minute}-{second}-{primary}.json'
     field: create
@@ -256,10 +264,13 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: '{fields.image}'
+        summary: '{caption}'
     fields:
     - name: image
       type: image
+    - name: youtube_url
+      type: string
+      label: YouTube video (optional link)
     - name: caption
       type: string
     - name: video
@@ -317,7 +328,8 @@ content:
     default: true
   - name: youtube_url
     type: string
-    label: YouTube URL (optional)
+    label: YouTube URL (legacy)
+    hidden: true
   filename:
     template: '{year}-{month}-{day}-{hour}-{minute}-{second}-{primary}.json'
     field: create

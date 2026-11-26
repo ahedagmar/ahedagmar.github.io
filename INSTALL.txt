@@ -1,28 +1,26 @@
-V18 — ACTUALIZACIÓN SIN REEMPLAZAR CONTENIDOS
-1. Descarga una copia de seguridad de tu repositorio (Code > Download ZIP).
-2. Reemplaza SOLO index.html, script.js y style.css en la raíz.
-   No borres content ni images. No reemplaces settings.json.
-3. En Pages CMS > Configuration, usa UNA configuración de cms/:
-   - pages-legacy.yml si todavía editas los proyectos como Item 1, Item 2.
-     Mantiene tus listas existentes y añade el campo YouTube URL.
-   - pages-collections.yml SOLO si ya migraste y comprobaste que todos
-     tus proyectos, updates y notas aparecen como archivos independientes
-     con el índice y el marcador de activación v17. Permite nombres, año,
-     búsqueda y orden. No migres de nuevo ni cambies la estructura a ciegas.
-   No subas los dos YAML al repositorio: copia el elegido a Configuration.
-   Si aún ves Item 1, envíame el ZIP ACTUAL de GitHub para preparar una
-   migración con tus datos reales. No hay que volver a introducirlos.
-4. Opcional: instala tools/optimize_images.py y .github/workflows/optimize-images.yml
-   en sus rutas exactas. Comprime imágenes nuevas en images/ al subirlas;
-   también puedes ejecutar Optimize portfolio images manualmente desde Actions.
-   GitHub Actions necesita permiso de escritura. Mantén los originales fuera
-   de GitHub: comprime los archivos publicados (sin cambiar nombres).
-   Conserva PNG/JPEG/WebP, no toca GIF animado, PDF ni vídeos. Límite 2400 px.
-   La historia git conserva versiones originales; no libera ese espacio histórico.
-   Si Pages usa un workflow propio, puede requerir volver a ejecutarlo después
-   de la optimización; el workflow incluido solicita rebuild de Pages por rama
-   pero no sustituye tu configuración actual de publicación.
-5. YouTube URL acepta links normales, youtu.be, Shorts y Live. Se carga al pulsar
-   Play video. Los videos antiguos siguen funcionando.
-6. Si ya migraste a colecciones, conserva tu collection-index.json actual.
-   Este paquete no modifica ni migra contenidos reales.
+V20 — ACTUALIZACIÓN SEGURA
+1. Copia de seguridad: https://github.com/dagmarvonderahe/dagmarvonderahe.github.io/archive/refs/heads/main.zip
+2. Reemplaza index.html, style.css y script.js en la raíz:
+   https://github.com/dagmarvonderahe/dagmarvonderahe.github.io/upload/main
+3. Pages CMS > Configuration (https://app.pagescms.org/):
+   usa cms/pages-legacy.yml si tus proyectos son Item 1, Item 2;
+   usa cms/pages-collections.yml SOLO si ya tienes proyectos en archivos
+   individuales y la migración previa funciona. No cambies de estructura
+   por instalar esta actualización. Pega el YAML elegido en Configuration.
+   En Gallery: Image o YouTube video (enlace), y Caption.
+   Las URLs existentes quedan conservadas; las nuevas se generan del título.
+4. Si todavía no tienes la optimización v18, instala opcionalmente
+   tools/optimize_images.py y .github/workflows/optimize-images.yml
+   en esas rutas. No hace falta reinstalarlos si ya existen.
+   Conserva originales fuera de GitHub: la compresión publicada es irreversible
+   salvo por la historia Git. No renombra archivos ni modifica formatos.
+   Puede requerir volver a ejecutar el workflow existente de publicación.
+5. No reemplaces content/, images/, collection-index.json ni settings.json.
+6. Comprueba que Actions termina y recarga la web:
+   https://github.com/dagmarvonderahe/dagmarvonderahe.github.io/actions
+   https://dagmarvonderahe.github.io/
+
+El temblor continuo se elimina; Home/Free reacciona al movimiento del ratón.
+La ficha de proyecto tiene texto y galería en columnas en escritorio.
+En móvil se permite scroll si hace falta y swipe en la galería.
+Los vídeos de YouTube no se descargan ni se cargan antes de pulsar Play.

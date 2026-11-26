@@ -45,24 +45,41 @@ body{padding-left:var(--v17-margin,3vw);padding-right:var(--v17-margin,3vw)}.pro
 
 /* v18 */
 .about-page>h1{font-size:18px;letter-spacing:0;margin:0 0 16px} #lightbox{touch-action:pan-y pinch-zoom}#light-close{width:44px;height:44px;line-height:44px;font-size:26px} .youtube{width:100%;aspect-ratio:16/9;background:#f3f3f3;margin:18px 0;display:grid;place-items:center}.youtube iframe{width:100%;height:100%;border:0}.youtube-play{padding:12px 18px;text-decoration:underline}.home-grid .hover-title{background:transparent!important}@media(pointer:coarse){#light-prev,#light-next{display:none!important}#lightbox{padding:48px 48px}#light-image{max-width:calc(100vw - 96px);max-height:calc(100dvh - 115px)}}
-@keyframes gentleShake {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(1px, -0.5px); }
-  50% { transform: translate(-0.8px, 1px); }
-  75% { transform: translate(0.5px, -0.8px); }
-}
 
-body.home-page .wall-card img {
-  animation: gentleShake 1.8s ease-in-out infinite;
+/* v20: quiet home; pointer movement only. */
+.wall-photo,.wall-card img{animation:none!important}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  body.home-page .wall:not(.home-grid) .wall-photo{transition:transform 110ms ease-out}
 }
-
-body.home-page .wall-card:nth-child(2n) img {
-  animation-delay: -0.7s;
-  animation-duration: 2.3s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body.home-page .wall-card img {
-    animation: none;
-  }
+#project-dialog{width:min(1320px,94vw);height:90dvh;max-height:90dvh;overflow:hidden;display:none}
+#project-dialog[open]{display:flex;flex-direction:column}
+#project-dialog .dialog-bar{flex:none}
+#project-content{flex:1;min-height:0;padding:0 clamp(16px,3vw,44px) 20px;overflow:hidden}
+.project-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.15fr);gap:clamp(15px,3vw,45px);height:100%;min-height:0}
+.project-info{overflow:auto;min-height:0;padding-right:8px}
+.project-info .modal-heading h1{margin-bottom:18px}
+.compact-meta{font-size:13px;color:#555;line-height:1.45;margin-bottom:16px}
+.project-info .description{font-size:14px;line-height:1.5;margin-bottom:16px}
+.extra-meta{font-size:13px;margin:15px 0}.extra-meta summary{cursor:pointer;color:#555}.extra-meta dl{margin-top:8px}
+.project-info .more-works{margin-top:25px;font-size:12px}.project-info .more-works nav{margin-bottom:14px}
+.project-info .related-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.project-info .related-grid small{font-size:11px}
+.project-media{min-height:0;display:flex;flex-direction:column;gap:7px}
+.project-stage{min-height:0;flex:1;display:flex;align-items:center;justify-content:center;touch-action:pan-y pinch-zoom}
+.project-stage figure{margin:0;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0}
+.project-stage .image-open{display:flex;align-items:center;justify-content:center;min-height:0;flex:1}
+.project-stage .image-open img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.project-stage figcaption{font-size:12px;color:#555;flex:none}
+.project-stage .youtube{margin:0;max-height:100%;max-width:100%;width:min(100%,720px);height:auto;min-height:0}
+.project-stage video{max-width:100%;max-height:100%}
+.project-strip{display:flex;overflow-x:auto;gap:5px;flex:none;position:relative;padding:2px 0;scrollbar-width:thin}
+.media-thumb{width:64px;height:52px;padding:0;flex:none;background:transparent!important;color:#111!important;opacity:.55}
+.media-thumb[aria-pressed=true]{opacity:1;outline:1px solid #111;outline-offset:-1px}
+.media-thumb img{width:100%;height:100%;object-fit:contain}
+.video-thumb{height:100%;display:grid;place-items:center;background:#f2f2f2}
+.media-nav{display:flex;justify-content:center;gap:16px;flex:none}.media-nav button{font-size:17px;padding:0 10px}
+@media(max-width:700px){
+#project-dialog{height:auto;max-height:92dvh;overflow:auto}#project-content{overflow:visible;flex:none}
+.project-split{display:flex;flex-direction:column;height:auto;gap:18px}
+.project-info{display:contents}.project-info .modal-heading{order:0}.project-media{order:1}.project-info .more-works{order:2}
+.project-stage{height:45dvh;flex:none}.project-stage .youtube{max-height:40dvh}.media-thumb{width:56px;height:45px}
 }
