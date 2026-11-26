@@ -1,0 +1,3 @@
+v19 — Después de instalar v18, sustituye index.html y style.css en la raíz.
+No modifiques script.js, images, content ni la configuración de Pages CMS.
+El temblor solo se aplica a las fotos de proyectos en Home / Free. La grilla se queda quieta.
