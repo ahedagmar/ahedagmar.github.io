@@ -1,0 +1,467 @@
+media:
+  input: images
+  output: /images
+content:
+- name: home
+  label: Home
+  type: file
+  path: content/home.json
+  format: json
+  fields:
+  - name: portrait
+    type: image
+    label: Homepage photograph
+  - name: portrait_size
+    label: Homepage photograph size
+    type: select
+    default: L
+    options:
+      values:
+      - XS
+      - S
+      - M
+      - L
+      - XL
+  - name: short_bio
+    type: text
+    label: HOME — short biography
+  - name: works_heading
+    type: string
+    label: Homepage project list heading (Here)
+- name: projects
+  label: Projects
+  type: collection
+  path: content/projects
+  format: json
+  fields:
+  - name: published
+    type: boolean
+    label: Published
+    default: true
+  - name: selected
+    label: Selected
+    type: boolean
+    default: true
+  - name: title
+    type: string
+    required: true
+  - name: slug
+    type: string
+    required: true
+    label: Unique URL name (lowercase and hyphens)
+  - name: year
+    type: string
+  - name: category
+    type: string
+    label: Categories (comma separated)
+  - name: location
+    type: string
+  - name: institution
+    type: string
+  - name: collaborators
+    type: string
+  - name: material
+    type: string
+  - name: dimensions
+    type: string
+  - name: status
+    type: string
+  - name: photography
+    type: string
+  - name: credits
+    type: text
+  - name: description
+    type: text
+  - name: external_link
+    type: string
+  - name: pdf
+    type: file
+  - name: cover
+    type: image
+    label: Cover photograph
+  - name: cover_caption
+    type: string
+  - name: hover_cover
+    type: image
+    label: Alternative cover on hover
+  - name: home_cover
+    type: image
+    label: Homepage cover
+  - name: related
+    type: string
+    label: Related project slugs (comma separated)
+  - name: homepage_priority
+    type: number
+    label: Homepage priority
+    default: 0
+  - name: gallery
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.image}'
+    fields:
+    - name: image
+      type: image
+    - name: caption
+      type: string
+    - name: video
+      type: file
+      label: Video (optional)
+      hidden: true
+    - name: alt
+      type: string
+      label: Alternative text
+    - name: layout
+      type: select
+      options:
+        values:
+        - auto
+        - full
+        - half
+      default: auto
+  - name: youtube_url
+    type: string
+    label: YouTube URL (optional)
+  filename:
+    template: '{fields.slug}.json'
+    field: create
+  view:
+    fields:
+    - title
+    - year
+    - published
+    primary: title
+    sort:
+    - title
+    - year
+    search:
+    - title
+    default:
+      sort: year
+      order: desc
+  exclude:
+  - README.md
+  subfolders: false
+- name: news
+  label: Updates
+  type: collection
+  path: content/news
+  format: json
+  fields:
+  - name: title
+    type: string
+    required: true
+  - name: date
+    type: date
+  - name: description
+    type: text
+  - name: published
+    type: boolean
+    label: Show on website
+    default: true
+  - name: type
+    type: string
+    label: Category (e.g. Exhibition, Publication, Presentation, Workshop)
+  - name: end_date
+    type: date
+  - name: location
+    type: string
+  - name: institution
+    type: string
+  - name: venue
+    type: string
+  - name: participants
+    type: string
+  - name: curator
+    type: string
+  - name: publisher
+    type: string
+  - name: credits
+    type: string
+  - name: external_link
+    type: string
+  - name: cover_caption
+    type: string
+  - name: cover
+    type: image
+  - name: gallery
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.image}'
+    fields:
+    - name: image
+      type: image
+    - name: caption
+      type: string
+    - name: video
+      type: file
+      label: Video (optional)
+      hidden: true
+    - name: alt
+      type: string
+      label: Alternative text
+    - name: layout
+      type: select
+      options:
+        values:
+        - auto
+        - full
+        - half
+      default: auto
+  - name: pdf
+    type: file
+  - name: youtube_url
+    type: string
+    label: YouTube URL (optional)
+  filename:
+    template: '{year}-{month}-{day}-{hour}-{minute}-{second}-{primary}.json'
+    field: create
+  view:
+    fields:
+    - title
+    - date
+    - published
+    primary: title
+    sort:
+    - title
+    - date
+    search:
+    - title
+    default:
+      sort: date
+      order: desc
+  exclude:
+  - README.md
+  subfolders: false
+- name: notebook
+  label: ¿? — Notebook
+  type: collection
+  path: content/notebook
+  format: json
+  fields:
+  - name: title
+    type: string
+  - name: date
+    type: date
+  - name: show_date
+    type: boolean
+    label: Show date
+  - name: text
+    type: text
+  - name: gallery
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.image}'
+    fields:
+    - name: image
+      type: image
+    - name: caption
+      type: string
+    - name: video
+      type: file
+      label: Video (optional)
+      hidden: true
+    - name: alt
+      type: string
+      label: Alternative text
+    - name: layout
+      type: select
+      options:
+        values:
+        - auto
+        - full
+        - half
+      default: auto
+  - name: size
+    type: select
+    options:
+      values:
+      - extra-small
+      - small
+      - medium
+      - large
+      - extra-large
+    label: Image size
+    default: medium
+  - name: alignment
+    type: select
+    options:
+      values:
+      - auto
+      - left
+      - centre
+      - right
+    label: Position
+    default: auto
+  - name: overlap
+    label: Maximum overlap (%)
+    type: select
+    default: '10'
+    options:
+      values:
+      - '0'
+      - '5'
+      - '10'
+      - '15'
+      - '20'
+    description: Only image-only posts can overlap. Text and captions remain clear.
+  - name: external_link
+    type: string
+  - name: published
+    type: boolean
+    default: true
+  - name: youtube_url
+    type: string
+    label: YouTube URL (optional)
+  filename:
+    template: '{year}-{month}-{day}-{hour}-{minute}-{second}-{primary}.json'
+    field: create
+  view:
+    fields:
+    - title
+    - date
+    - published
+    primary: title
+    sort:
+    - title
+    - date
+    search:
+    - title
+    default:
+      sort: date
+      order: desc
+  exclude:
+  - README.md
+  subfolders: false
+- name: about
+  label: About
+  type: file
+  path: content/about.json
+  format: json
+  fields:
+  - name: name
+    type: string
+    label: Name
+  - name: location
+    type: string
+    label: Location
+  - name: about_portrait
+    type: image
+    label: About photograph (optional)
+  - name: full_bio
+    type: text
+    label: ABOUT — full biography
+  - name: email
+    type: string
+    label: Public contact email
+  - name: instagram
+    type: string
+  - name: cv
+    type: file
+    label: CV PDF
+  - name: education
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title} — {fields.year}'
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
+  - name: experience
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title} — {fields.year}'
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
+  - name: awards
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title} — {fields.year}'
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
+  - name: workshops
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title} — {fields.year}'
+    fields:
+    - name: year
+      type: string
+    - name: title
+      type: string
+    - name: institution
+      type: string
+    - name: description
+      type: text
+- name: website_settings
+  label: Website settings
+  type: file
+  path: content/settings.json
+  format: json
+  fields:
+  - name: page_margin
+    label: Page margin (% of viewport)
+    type: number
+    default: 3
+  - name: image_gap
+    label: Image gap
+    type: number
+    default: 6
+  - name: gallery_white
+    label: Gallery white
+    type: number
+    default: 50
+  - name: works_columns
+    label: Works columns
+    type: number
+    default: 4
+  - name: home_overlap
+    label: Home overlap
+    type: number
+    default: 20
+  - name: home_images
+    label: Home image count (0 = automatic)
+    type: number
+    default: 0
+  - name: floating_question
+    label: Floating question
+    type: boolean
+    default: true
+  - name: custom_cursor
+    label: Custom cursor
+    type: boolean
+    default: true
+settings:
+  content:
+    merge: true

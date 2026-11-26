@@ -1,8 +1,28 @@
-V17 — INSTALLATION (one-time migration)
-1. Back up the current repository (GitHub > Code > Download ZIP).
-2. Upload index.html, script.js, style.css, collection-index.json and content/settings.json to their same paths in the repository. Do not delete original content files. The ZIP also contains .pages.yml; do not apply this until step 5. Do not upload migrate-v17.html or INSTALL.txt unless desired.
-3. Open migrate-v17.html locally. Select the existing content/projects.json, content/news.json, content/notebook.json from your backup. Download the migration ZIP and extract it.
-4. Upload the generated content folder to the repository root. It creates individual records under content/projects/, content/news/, content/notebook/ and a collections-ready.json activation marker. Keep the old JSON arrays as backup. The generated collection-index.json requires GitHub Pages' Jekyll build (Settings > Pages > Deploy from a branch; no .nojekyll file). Check the online collection-index.json is valid JSON and lists all migrated records before editing in CMS. If it is not, do not switch CMS yet. Remove collections-ready.json to revert to the original arrays.
-5. Paste .pages.yml into Pages CMS Configuration and save. The CMS collections use title and year/date columns. Check the number of entries against migration report before editing.
-6. New and edited records are picked up by the automatically generated index at each Pages deployment. The old arrays are backups, no longer edited by CMS. For subsequent updates do not re-run the migration.
-Notes: static public repository means drafts and media may still be accessible by direct URL; not private storage. Video files must be browser-compatible (MP4/WebM). Image download deterrents do not prevent screenshots or direct retrieval. Individual project hash URLs retained. Social share cards, automatic image optimisation and authenticated preview are not implemented.
+V18 — ACTUALIZACIÓN SIN REEMPLAZAR CONTENIDOS
+1. Descarga una copia de seguridad de tu repositorio (Code > Download ZIP).
+2. Reemplaza SOLO index.html, script.js y style.css en la raíz.
+   No borres content ni images. No reemplaces settings.json.
+3. En Pages CMS > Configuration, usa UNA configuración de cms/:
+   - pages-legacy.yml si todavía editas los proyectos como Item 1, Item 2.
+     Mantiene tus listas existentes y añade el campo YouTube URL.
+   - pages-collections.yml SOLO si ya migraste y comprobaste que todos
+     tus proyectos, updates y notas aparecen como archivos independientes
+     con el índice y el marcador de activación v17. Permite nombres, año,
+     búsqueda y orden. No migres de nuevo ni cambies la estructura a ciegas.
+   No subas los dos YAML al repositorio: copia el elegido a Configuration.
+   Si aún ves Item 1, envíame el ZIP ACTUAL de GitHub para preparar una
+   migración con tus datos reales. No hay que volver a introducirlos.
+4. Opcional: instala tools/optimize_images.py y .github/workflows/optimize-images.yml
+   en sus rutas exactas. Comprime imágenes nuevas en images/ al subirlas;
+   también puedes ejecutar Optimize portfolio images manualmente desde Actions.
+   GitHub Actions necesita permiso de escritura. Mantén los originales fuera
+   de GitHub: comprime los archivos publicados (sin cambiar nombres).
+   Conserva PNG/JPEG/WebP, no toca GIF animado, PDF ni vídeos. Límite 2400 px.
+   La historia git conserva versiones originales; no libera ese espacio histórico.
+   Si Pages usa un workflow propio, puede requerir volver a ejecutarlo después
+   de la optimización; el workflow incluido solicita rebuild de Pages por rama
+   pero no sustituye tu configuración actual de publicación.
+5. YouTube URL acepta links normales, youtu.be, Shorts y Live. Se carga al pulsar
+   Play video. Los videos antiguos siguen funcionando.
+6. Si ya migraste a colecciones, conserva tu collection-index.json actual.
+   Este paquete no modifica ni migra contenidos reales.
