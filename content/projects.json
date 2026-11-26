@@ -29,5 +29,11 @@
         "layout": "auto"
       }
     ]
+  },
+  {
+    "published": true,
+    "selected": true,
+    "title": "Waiting ",
+    "homepage_priority": 0
   }
 ]
