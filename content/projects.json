@@ -1,67 +1,10 @@
 [
   {
     "published": true,
-    "selected": false,
-    "title": "Do Not Refill",
-    "slug": "do-not-refill",
-    "year": "2026",
-    "category": "paint",
-    "location": "Düsseldorf",
-    "collaborators": "JOL LONM",
-    "material": "METAL",
-    "dimensions": "GDG",
-    "status": "DHDF",
-    "photography": "SDHF",
-    "description": "An exploration of discarded steel cylinders and their transformation into functional art objects.\nAn exploration of discarded steel cylinders and their transformation into functional art objects.\nAn exploration of discarded steel cylinders and their transformation into functional art objects.\nAn exploration of discarded steel cylinders and their transformation into functional art objects.\nAn exploration of discarded steel cylinders and their transformation into functional art objects.\nAn exploration of discarded steel cylinders and their transformation into functional art objects.\nAn exploration of discarded steel cylinders and their transformation into functional art objects.",
-    "cover": "/images/IMG_20261124_145118201.jpg",
-    "cover_caption": "SHF",
-    "gallery": [
-      {
-        "image": "/images/IMG_20261114_174839271.jpg"
-      },
-      {
-        "image": "/images/239631155_1695379531_v16_9_1600.webp"
-      },
-      {
-        "image": "/images/IMG_20261124_145118201-1.jpg"
-      }
-    ]
-  },
-  {
-    "published": true,
     "selected": true,
-    "title": "Stories of Waiting",
-    "slug": "stories-of-waiting",
-    "year": "2026",
-    "category": "Spatial research",
-    "description": "A spatial investigation into waiting and welcome at the immigration office in Düsseldorf.",
-    "cover": "/images/239631155_1695379531_v16_9_1600.webp"
-  },
-  {
-    "published": true,
-    "selected": true,
-    "title": "Die verrutschte Grenze",
-    "slug": "wachhaus",
-    "year": "2026",
-    "category": "Installation",
-    "description": "A spatial intervention exploring boundaries within a former guardhouse."
-  },
-  {
-    "published": true,
-    "selected": true,
-    "title": "Athens Central Station",
-    "slug": "athens",
-    "year": "2026",
-    "category": "Architecture",
-    "description": "Architectural study of a central railway station in Athens."
-  },
-  {
-    "published": true,
-    "selected": true,
-    "title": "Valdivia Cultural Centre",
-    "slug": "valdivia",
-    "year": "2022",
-    "category": "Architecture",
-    "description": "An architectural project exploring the relationship between the city and its river."
+    "title": "Röhrenwurm",
+    "year": "2024",
+    "category": "Instalation",
+    "homepage_priority": 0
   }
 ]
