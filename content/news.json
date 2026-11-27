@@ -1,8 +1,14 @@
 [
   {
-    "title": "ladlsld",
-    "date": "2026-11-25",
+    "title": "Today rundgang",
+    "date": "2026-11-29",
     "description": "sfddgasddssssssssssssdg",
-    "published": true
+    "published": true,
+    "type": "Exhibition",
+    "end_date": "2026-11-27",
+    "location": "Santaigo de chile",
+    "cover": "/images/Captura de pantalla 2025-07-24 002550.png",
+    "show_on_home": true,
+    "announcement_size": "medium"
   }
 ]
