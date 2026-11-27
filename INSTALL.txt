@@ -1,14 +1,7 @@
-VERSION 27 — UPDATE ONLY
-Upload index.html, script.js, style.css at the root.
-Replace root .pages.yml using cms/pages-legacy.yml if projects are stored in content/projects.json, or cms/pages-collections.yml if using individual files.
-Announcements uses a NEW file content/announcement.json. Upload optional/announcement.json into content ONLY if that file does not exist yet. Do not replace any existing file there.
-Home: remove contact lines from Description when adding Additional information, to avoid duplicates. Existing description remains readable.
-About: old exhibition entries remain in news files; copy desired entries to About > Exhibitions before replacing the old list. Old active announcements are not automatically shown, activate your new announcement explicitly.
-Projects: old external_link is no longer displayed; use Links instead. Legacy venue is combined into location for display.
-Do not replace or delete content, images, collection-index.json or workflows.
+VERSION 28 — DESIGN UPDATE ONLY
+Upload index.html, script.js, style.css to the root of your repository and replace the existing files.
+No CMS change needed if v27 is already installed. Do not overwrite content, images, collection-index.json or workflows.
 Upload: https://github.com/ahedagmar/ahedagmar.github.io/upload/main
-New announcement: https://github.com/ahedagmar/ahedagmar.github.io/upload/main/content
-CMS config: https://github.com/ahedagmar/ahedagmar.github.io/edit/main/.pages.yml
 CMS: https://app.pagescms.org/ahedagmar/ahedagmar.github.io/main
 Actions: https://github.com/ahedagmar/ahedagmar.github.io/actions
 Site: https://ahedagmar.github.io/
