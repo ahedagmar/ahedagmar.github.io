@@ -287,11 +287,11 @@ header .brand:hover .surname,header .brand:focus-visible .surname{color:inherit;
 }
 @keyframes home-hover-tremor{
  0%,100%{transform:translate(0,0)}
- 16%{transform:translate(.65px,-.4px)}
- 33%{transform:translate(-.6px,.55px)}
- 50%{transform:translate(.45px,.35px)}
- 66%{transform:translate(-.55px,-.5px)}
- 83%{transform:translate(.3px,.6px)}
+ 16%{transform:translate(0.455px,-0.280px)}
+ 33%{transform:translate(-0.420px,0.385px)}
+ 50%{transform:translate(0.315px,0.245px)}
+ 66%{transform:translate(-0.385px,-0.350px)}
+ 83%{transform:translate(0.210px,0.420px)}
 }
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
  body.home-page:not(.modal-open) .wall-card:hover .wall-photo,
@@ -300,3 +300,6 @@ header .brand:hover .surname,header .brand:focus-visible .surname{color:inherit;
    animation:home-hover-tremor .65s steps(1,end) infinite!important;
  }
 }
+
+.youtube{position:relative}.youtube iframe{position:absolute;inset:0;z-index:1}.youtube iframe.youtube-loading{opacity:0;pointer-events:none}
+.youtube-play[aria-busy="true"]{cursor:progress}

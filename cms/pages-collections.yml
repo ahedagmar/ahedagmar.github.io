@@ -49,18 +49,21 @@ content:
     type: boolean
     label: Show on website
     default: false
+  - name: heading
+    type: string
+    label: Heading (optional)
   - name: title
     type: string
     label: Title
   - name: date
     type: string
     label: Date (free text)
-  - name: description
-    type: text
-    label: Description
   - name: location
     type: string
     label: Location
+  - name: description
+    type: text
+    label: Description
   - name: cover
     type: image
     label: Image
@@ -110,6 +113,9 @@ content:
       - proposal
       - academic project
     description: Optional project status.
+  - name: exhibition_name
+    type: string
+    label: Exhibition name (optional)
   - name: location
     type: string
   - name: category
