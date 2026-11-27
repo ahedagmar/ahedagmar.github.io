@@ -1,6 +1,6 @@
-VERSION 28 — DESIGN UPDATE ONLY
+VERSION 29 — DESIGN UPDATE ONLY
 Upload index.html, script.js, style.css to the root of your repository and replace the existing files.
-No CMS change needed if v27 is already installed. Do not overwrite content, images, collection-index.json or workflows.
+No CMS change needed if v27 or v28 is already installed. Do not overwrite content, images, collection-index.json or workflows.
 Upload: https://github.com/ahedagmar/ahedagmar.github.io/upload/main
 CMS: https://app.pagescms.org/ahedagmar/ahedagmar.github.io/main
 Actions: https://github.com/ahedagmar/ahedagmar.github.io/actions
