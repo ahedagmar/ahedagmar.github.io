@@ -35,5 +35,13 @@
       "name": "@dagmar.ahe",
       "url": "https://www.instagram.com/dagmar.ahe/"
     }
+  ],
+  "exhibitions": [
+    {
+      "title": "„Mr. Watson, come here. I want to see you.“",
+      "date": "08/2024",
+      "location": "Die Walachei, Düsseldorf",
+      "associated_project": "Röhrenwurm"
+    }
   ]
 }
