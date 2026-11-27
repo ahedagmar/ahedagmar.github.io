@@ -5,24 +5,42 @@
     "title": "Röhrenwurm",
     "year": "2024",
     "status": "realized",
+    "exhibition_name": "Mr. Watson, come here. I want to see you.",
     "location": "Die Walachei - AStA-Ausstellungsraum der Kunstakademie Düsseldorf ",
     "category": "Installation",
     "collaborators": "Kyrill Ninov",
-    "material": "Metalllüftungsrohre",
+    "material": "Metal ventilation ducts, sound",
     "photography": "Suna Ozankan",
-    "description": "Ein rohes, hohles Echo. Mehr als Flüssigkeit strömt hindurch, Klänge verzerren. Kommunikation – verzerrt, widersprüchlich, rätselhaft. Mund zu Mund, Echo zu Echo. Jeder Laut ein Bote?\n\nEmpfänger, Sender. Einer empfängt, der andere sendet stumm. Doch die Übertragung geht weiter. Botschaften wandern. Irgendwann verstummt die Verbindung.\n\nLink, Apparat, Leiter.",
-    "cover": "/images/DSCF2591.jpg",
+    "credits": "Exhibition with the Baukunst Students: Suna Ozankan, Benita Thisbe Tauer, Jan Ribbers and Dagmar von der Ahe.",
+    "description": "A raw, hollow echo. More than liquid flows through it; sounds become distorted. Communication — distorted, contradictory, enigmatic. Mouth to mouth, echo to echo. Is every sound a messenger?\n\nReceiver, sender. One receives, the other transmits silently. Yet the transmission continues. Messages travel. Eventually, the connection falls silent.\n\nLink, apparatus, conductor.",
+    "cover": "/images/24_Roehrewurm_1.jpg",
     "gallery": [
       {
-        "image": "/images/DSCF2506.jpg",
+        "image": "/images/24_Roehrewurm_2.jpg",
         "layout": "auto"
       },
       {
-        "image": "/images/DSCF2601.jpg",
+        "image": "/images/24_Roehrewurm_3.jpg",
         "layout": "auto"
       },
       {
-        "youtube_url": "https://www.youtube.com/watch?v=uaFPH4-qvBs",
+        "image": "/images/24_Roehrewurm_4.jpg",
+        "layout": "auto"
+      },
+      {
+        "image": "/images/24_Roehrewurm_7.jpg",
+        "layout": "auto"
+      },
+      {
+        "image": "/images/24_Roehrewurm_5.jpg",
+        "layout": "auto"
+      },
+      {
+        "image": "/images/24_Roehrewurm_6.jpg",
+        "layout": "auto"
+      },
+      {
+        "youtube_url": "https://youtube.com/shorts/EJ7Z74KMyUo",
         "layout": "auto"
       }
     ]
