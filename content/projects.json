@@ -2,18 +2,16 @@
   {
     "published": true,
     "selected": true,
-    "content_review": "Complete ✓",
     "title": "Röhrenwurm",
     "year": "2024",
-    "category": "Installation ",
+    "status": "realized",
     "location": "Die Walachei - AStA-Ausstellungsraum der Kunstakademie Düsseldorf ",
+    "category": "Installation",
     "collaborators": "Kyrill Ninov",
     "material": "Metalllüftungsrohre",
-    "status": "built",
     "photography": "Suna Ozankan",
     "description": "Ein rohes, hohles Echo. Mehr als Flüssigkeit strömt hindurch, Klänge verzerren. Kommunikation – verzerrt, widersprüchlich, rätselhaft. Mund zu Mund, Echo zu Echo. Jeder Laut ein Bote?\n\nEmpfänger, Sender. Einer empfängt, der andere sendet stumm. Doch die Übertragung geht weiter. Botschaften wandern. Irgendwann verstummt die Verbindung.\n\nLink, Apparat, Leiter.",
     "cover": "/images/DSCF2591.jpg",
-    "homepage_priority": 0,
     "gallery": [
       {
         "image": "/images/DSCF2506.jpg",
@@ -32,12 +30,10 @@
   {
     "published": true,
     "selected": true,
-    "content_review": "To finish",
     "title": "oper am rhein",
     "year": "2024",
     "category": "Architecture ",
     "cover": "/images/Captura de pantalla 2026-11-26 215803.png",
-    "homepage_priority": 0,
     "gallery": [
       {
         "layout": "auto"
@@ -47,32 +43,26 @@
   {
     "published": true,
     "selected": true,
-    "content_review": "To finish",
     "title": "Waiting ",
     "year": "2026",
     "category": "Installation ",
-    "cover": "/images/1000233711.png",
-    "homepage_priority": 0
+    "cover": "/images/1000233711.png"
   },
   {
     "published": true,
     "selected": true,
-    "content_review": "To finish",
     "title": "Ups alle Wände weg",
     "year": "2026",
     "category": "Architecture ",
-    "cover": "/images/1000233712.jpg",
-    "homepage_priority": 0
+    "cover": "/images/1000233712.jpg"
   },
   {
     "published": true,
     "selected": true,
-    "content_review": "To finish",
     "title": "Moyland",
     "year": "2025",
     "category": "Architecture ",
     "cover": "/images/1000233714.jpg",
-    "homepage_priority": 0,
     "gallery": [
       {
         "layout": "auto"
@@ -82,31 +72,25 @@
   {
     "published": true,
     "selected": true,
-    "content_review": "To finish",
     "title": "Casa Pellchuquin ",
     "year": "2023",
     "category": "Architecture ",
-    "cover": "/images/1000233720.png",
-    "homepage_priority": 0
+    "cover": "/images/1000233720.png"
   },
   {
     "published": true,
     "selected": true,
-    "content_review": "To finish",
     "title": "Humedales ",
     "year": "2024",
     "category": "Urbanism",
-    "cover": "/images/1000233718.png",
-    "homepage_priority": 0
+    "cover": "/images/1000233718.png"
   },
   {
     "published": true,
     "selected": true,
-    "content_review": "To finish",
     "title": "El emerger de los vestigios ",
     "year": "2022",
     "category": "Architecture ",
-    "cover": "/images/1000233716.png",
-    "homepage_priority": 0
+    "cover": "/images/1000233716.png"
   }
 ]
