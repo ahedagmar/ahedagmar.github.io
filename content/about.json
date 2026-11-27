@@ -26,5 +26,14 @@
       "institution": "Atelier Brum"
     }
   ],
-  "full_bio": "Chilean artist and architectural designer based in Düsseldorf, Germany. Her practice moves between spatial interventions, sculpture, and material experimentation, with a particular interest in bureaucratic spaces and the invisible systems that shape everyday life. Through her work, she questions how architecture embodies power, control, belonging, and exclusion, exploring the artistic potential of overlooked spaces, objects, and social conditions."
+  "full_bio": "Chilean artist and architectural designer based in Düsseldorf, Germany. Her practice moves between spatial interventions, sculpture, and material experimentation, with a particular interest in bureaucratic spaces and the invisible systems that shape everyday life. Through her work, she questions how architecture embodies power, control, belonging, and exclusion, exploring the artistic potential of overlooked spaces, objects, and social conditions.",
+  "additional_info": [
+    {
+      "name": "ahe.dagmar@gmail.com"
+    },
+    {
+      "name": "@dagmar.ahe",
+      "url": "https://www.instagram.com/dagmar.ahe/"
+    }
+  ]
 }
