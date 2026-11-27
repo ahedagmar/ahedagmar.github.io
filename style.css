@@ -271,3 +271,32 @@ header .brand:hover .surname,header .brand:focus-visible .surname{color:inherit;
  .home-announcement.announcement-L strong{font-size:19px}
  .home-announcement.announcement-XL strong{font-size:22px}
 }
+
+/* v26 — announcement aligned to the biography, poster beneath text. */
+.home-announcement{flex-direction:column;align-items:flex-start;gap:8px;padding:0;line-height:1.2}
+.home-announcement strong{margin:0 0 4px;font-weight:400}
+.home-announcement .announcement-heading{display:block;font-size:12px;line-height:1.2;margin:0 0 4px}
+.home-announcement .announcement-poster{width:min(42%,130px);max-width:100%;flex:none}
+.home-announcement .announcement-poster img{width:100%;height:auto;max-height:130px;object-fit:contain;object-position:left top}
+.home-announcement .announcement-poster .announcement-hover{height:100%!important;object-position:left top}
+.wall-bio .bio-text .bio-more{font-size:inherit;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:650px){
+ .home-announcement .announcement-poster{width:min(55%,85px)}
+ .home-announcement .announcement-poster img{max-height:85px}
+ .home-announcement .announcement-heading{font-size:10px}
+}
+@keyframes home-hover-tremor{
+ 0%,100%{transform:translate(0,0)}
+ 16%{transform:translate(.65px,-.4px)}
+ 33%{transform:translate(-.6px,.55px)}
+ 50%{transform:translate(.45px,.35px)}
+ 66%{transform:translate(-.55px,-.5px)}
+ 83%{transform:translate(.3px,.6px)}
+}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ body.home-page:not(.modal-open) .wall-card:hover .wall-photo,
+ body.home-page:not(.modal-open) .wall-portrait:hover img,
+ body.home-page:not(.modal-open) .home-announcement:hover .announcement-poster{
+   animation:home-hover-tremor .65s steps(1,end) infinite!important;
+ }
+}
