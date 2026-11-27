@@ -238,3 +238,36 @@ header .brand:hover .surname,header .brand:focus-visible .surname{color:inherit;
  .home-announcement.announcement-small strong{font-size:13px}
  .home-announcement img{width:27%;max-height:65px}
 }
+
+/* v25 — simpler editing and presentation */
+.compact-meta{color:#111!important;font-size:14px;margin-bottom:18px}
+.project-info .project-meta{margin-top:0;margin-bottom:20px}
+.project-info .project-meta dt{color:#777}
+.project-info .project-meta dd{color:#111}
+.wall-bio .bio-text .bio-plus{text-decoration:none;font-size:17px}
+.about-links{display:block;line-height:1.5}
+.about-links a{text-decoration:underline}
+.note h2{font-size:18px;font-weight:400;line-height:1.25}
+.note-photo{display:block;width:100%;padding:0;border:0;background:transparent}
+.note-photo img{display:block;width:100%;height:auto}
+.home-announcement{width:min(30%,340px);align-items:flex-start}
+.announcement-poster{position:relative;display:block;flex:none;width:30%}
+.home-announcement .announcement-poster img{width:100%;height:auto;max-height:110px;display:block;object-fit:contain}
+.home-announcement .announcement-hover{position:absolute;inset:0;height:100%!important;opacity:0;background:#fff}
+@media(hover:hover){.home-announcement:hover .announcement-hover{opacity:1}}
+.home-announcement.announcement-XS strong{font-size:14px}
+.home-announcement.announcement-S strong{font-size:18px}
+.home-announcement.announcement-M strong{font-size:24px}
+.home-announcement.announcement-L strong{font-size:28px}
+.home-announcement.announcement-XL strong{font-size:34px}
+#lightbox::backdrop{background:rgba(255,255,255,.5)}
+#light-caption{display:none}
+@media(max-width:650px){
+ .home-announcement{width:45%;gap:5px}
+ .home-announcement .announcement-poster img{max-height:80px}
+ .home-announcement.announcement-XS strong{font-size:12px}
+ .home-announcement.announcement-S strong{font-size:14px}
+ .home-announcement.announcement-M strong{font-size:16px}
+ .home-announcement.announcement-L strong{font-size:19px}
+ .home-announcement.announcement-XL strong{font-size:22px}
+}

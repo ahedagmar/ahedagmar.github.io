@@ -10,9 +10,9 @@ content:
   fields:
   - name: portrait
     type: image
-    label: Homepage photograph
+    label: Photograph
   - name: portrait_size
-    label: Homepage photograph size
+    label: Photograph size
     type: select
     default: L
     options:
@@ -24,11 +24,60 @@ content:
       - XL
   - name: short_bio
     type: text
-    label: HOME — short biography
-    description: Email addresses and @Instagram handles become underlined links automatically.
-  - name: works_heading
+    label: Description
+  - name: additional_info
+    label: Additional information
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.name}'
+    fields:
+    - name: name
+      type: string
+      label: Text
+    - name: url
+      type: string
+      label: Link (optional)
+- name: announcement
+  label: Announcements
+  type: file
+  path: content/announcement.json
+  format: json
+  fields:
+  - name: published
+    type: boolean
+    label: Show on website
+    default: false
+  - name: title
     type: string
-    label: Homepage project list heading (Here)
+    label: Title
+  - name: date
+    type: string
+    label: Date (free text)
+  - name: description
+    type: text
+    label: Description
+  - name: location
+    type: string
+    label: Location
+  - name: cover
+    type: image
+    label: Image
+  - name: hover_cover
+    type: image
+    label: Hover image (optional)
+  - name: size
+    type: select
+    label: Size
+    default: M
+    options:
+      values:
+      - XS
+      - S
+      - M
+      - L
+      - XL
 - name: projects
   label: Projects
   type: file
@@ -43,28 +92,29 @@ content:
     label: Selected
     type: boolean
     default: true
-  - name: content_review
-    type: select
-    label: CMS completion (internal)
-    default: To finish
-    options:
-      values:
-      - To finish
-      - Complete ✓
   - name: title
     type: string
     required: true
-  - name: slug
-    type: string
-    label: Legacy URL (preserved)
-    hidden: true
   - name: year
+    type: string
+  - name: status
+    type: select
+    options:
+      values:
+      - ''
+      - realized
+      - unrealized
+      - ongoing
+      - built
+      - research
+      - proposal
+      - academic project
+    description: Optional project status.
+  - name: location
     type: string
   - name: category
     type: string
     label: Categories (comma separated)
-  - name: location
-    type: string
   - name: institution
     type: string
   - name: collaborators
@@ -73,30 +123,12 @@ content:
     type: string
   - name: dimensions
     type: string
-  - name: status
-    type: select
-    options:
-      values:
-      - ''
-      - completed
-      - ongoing
-      - built
-      - unbuilt
-      - temporary
-      - research
-      - experimental
-      - proposal
-    description: Optional project status.
   - name: photography
     type: string
   - name: credits
     type: text
   - name: description
     type: text
-  - name: external_link
-    type: string
-    label: Existing link (legacy)
-    description: Existing link preserved. Add named links below.
   - name: links
     label: Links
     type: object
@@ -116,26 +148,6 @@ content:
   - name: cover
     type: image
     label: Cover photograph
-  - name: cover_caption
-    type: string
-    hidden: true
-  - name: hover_cover
-    type: image
-    label: Alternative cover on hover
-    hidden: true
-  - name: home_cover
-    type: image
-    label: Homepage cover
-    hidden: true
-  - name: related
-    type: string
-    label: Related project slugs (comma separated)
-    hidden: true
-  - name: homepage_priority
-    type: number
-    label: Homepage priority
-    default: 0
-    hidden: true
   - name: gallery
     type: object
     list:
@@ -168,114 +180,39 @@ content:
         - half
       default: auto
       hidden: true
-  - name: youtube_url
+  - name: slug
     type: string
-    label: YouTube URL (legacy)
+    label: Legacy URL (preserved)
     hidden: true
-  list: true
-- name: news
-  label: Exhibitions
-  type: file
-  path: content/news.json
-  format: json
-  fields:
-  - name: title
-    type: string
-    required: true
-    label: Exhibition title
-  - name: date
-    type: date
-  - name: description
-    type: text
-  - name: published
-    type: boolean
-    label: Show on website
-    default: true
-  - name: type
-    type: string
-    label: Category (e.g. Exhibition, Publication, Presentation, Workshop)
-  - name: end_date
-    type: date
-  - name: location
-    type: string
-  - name: institution
-    type: string
-  - name: venue
-    type: string
-  - name: participants
-    type: string
-  - name: curator
-    type: string
-  - name: publisher
-    type: string
-  - name: credits
-    type: string
-  - name: external_link
-    type: string
   - name: cover_caption
     type: string
-  - name: cover
+    hidden: true
+  - name: hover_cover
     type: image
-    label: Exhibition poster
-  - name: gallery
-    type: object
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{caption}'
-    fields:
-    - name: image
-      type: image
-    - name: youtube_url
-      type: string
-      label: YouTube video (optional link)
-    - name: caption
-      type: string
-    - name: video
-      type: file
-      label: Video (optional)
-      hidden: true
-    - name: alt
-      type: string
-      label: Alternative text
-    - name: layout
-      type: select
-      options:
-        values:
-        - auto
-        - full
-        - half
-      default: auto
-  - name: pdf
-    type: file
+    label: Alternative cover on hover
+    hidden: true
+  - name: home_cover
+    type: image
+    label: Homepage cover
+    hidden: true
+  - name: related
+    type: string
+    label: Related project slugs (comma separated)
+    hidden: true
   - name: youtube_url
     type: string
     label: YouTube URL (legacy)
     hidden: true
-  - name: associated_project
-    type: string
-    label: Associated project (optional)
-    description: Enter the exact project title or its existing slug.
-  - name: show_on_home
-    type: boolean
-    label: Show blue announcement on home
-    default: false
-  - name: announcement_size
-    type: select
-    label: Announcement size
-    default: medium
-    options:
-      values:
-      - small
-      - medium
-      - large
   list: true
 - name: notebook
-  label: ¿? — Notebook
+  label: ¿?
   type: file
   path: content/notebook.json
   format: json
   fields:
+  - name: published
+    type: boolean
+    default: true
   - name: title
     type: string
   - name: date
@@ -285,35 +222,6 @@ content:
     label: Show date
   - name: text
     type: text
-  - name: gallery
-    type: object
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{caption}'
-    fields:
-    - name: image
-      type: image
-    - name: youtube_url
-      type: string
-      label: YouTube video (optional link)
-    - name: caption
-      type: string
-    - name: video
-      type: file
-      label: Video (optional)
-      hidden: true
-    - name: alt
-      type: string
-      label: Alternative text
-    - name: layout
-      type: select
-      options:
-        values:
-        - auto
-        - full
-        - half
-      default: auto
   - name: size
     type: select
     options:
@@ -335,27 +243,33 @@ content:
       - right
     label: Position
     default: auto
-  - name: overlap
-    label: Maximum overlap (%)
-    type: select
-    default: '10'
-    options:
-      values:
-      - '0'
-      - '5'
-      - '10'
-      - '15'
-      - '20'
-    description: Only image-only posts can overlap. Text and captions remain clear.
-  - name: external_link
-    type: string
-  - name: published
-    type: boolean
-    default: true
-  - name: youtube_url
-    type: string
-    label: YouTube URL (legacy)
-    hidden: true
+  - name: links
+    label: Links
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.name}'
+    fields:
+    - name: name
+      type: string
+      label: Link name
+    - name: url
+      type: string
+      label: URL
+  - name: gallery
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.image} {fields.youtube_url}'
+    fields:
+    - name: image
+      type: image
+      label: Image
+    - name: youtube_url
+      type: string
+      label: YouTube link
   list: true
 - name: about
   label: About
@@ -363,27 +277,50 @@ content:
   path: content/about.json
   format: json
   fields:
-  - name: name
-    type: string
-    label: Name
-  - name: location
-    type: string
-    label: Location
-  - name: about_portrait
-    type: image
-    label: About photograph (optional)
-    hidden: true
   - name: full_bio
     type: text
-    label: ABOUT — full biography
-  - name: email
-    type: string
-    label: Public contact email
-  - name: instagram
-    type: string
-  - name: cv
-    type: file
-    label: CV PDF
+    label: Description
+  - name: additional_info
+    label: Additional information
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.name}'
+    fields:
+    - name: name
+      type: string
+      label: Text
+    - name: url
+      type: string
+      label: Link (optional)
+  - name: exhibitions
+    label: Exhibitions
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title}'
+    fields:
+    - name: title
+      type: string
+      label: Title
+    - name: date
+      type: string
+      label: Date (free text)
+    - name: location
+      type: string
+      label: Location
+    - name: institution
+      type: string
+      label: Institution (optional)
+    - name: associated_project
+      type: string
+      label: Related project (optional)
+      description: Exact project title or existing slug.
+    - name: external_link
+      type: string
+      label: External link (optional)
   - name: education
     type: object
     list:
@@ -444,46 +381,6 @@ content:
       type: string
     - name: description
       type: text
-- name: website_settings
-  label: Website settings
-  type: file
-  path: content/settings.json
-  format: json
-  fields:
-  - name: page_margin
-    label: Page margin (% of viewport)
-    type: number
-    default: 3
-  - name: image_gap
-    label: Image gap
-    type: number
-    default: 6
-  - name: gallery_white
-    label: Gallery white
-    type: number
-    default: 50
-  - name: works_columns
-    label: Works columns
-    type: number
-    default: 4
-  - name: home_overlap
-    label: Home overlap
-    type: number
-    default: 20
-    hidden: true
-  - name: home_images
-    label: Home image count (0 = automatic)
-    type: number
-    default: 0
-    hidden: true
-  - name: floating_question
-    label: Floating question
-    type: boolean
-    default: true
-  - name: custom_cursor
-    label: Custom cursor
-    type: boolean
-    default: true
 settings:
   content:
     merge: true
