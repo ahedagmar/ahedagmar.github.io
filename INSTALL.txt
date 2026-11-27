@@ -1,8 +1,11 @@
-Portfolio v23 – update only
-Replace index.html, style.css and script.js in the root of your repository.
-Do NOT delete or replace content/, images/, collection-index.json, .pages.yml or GitHub workflows.
-No CMS configuration changes required.
-Repository: https://github.com/ahedagmar/ahedagmar.github.io
+VERSION 24 — UPDATE ONLY
+1. Upload index.html, script.js, style.css to repository root, replacing old versions.
+2. Replace root .pages.yml with the content of cms/pages-legacy.yml (if Projects is one file, content/projects.json) OR cms/pages-collections.yml (if each project is a JSON file in content/projects/ and collections-ready is enabled). Do not upload both as .pages.yml. No migration necessary.
+3. Existing Updates data stays in content/news.json or content/news/; CMS now calls it Exhibitions. Exhibition and announcement links use exact project title or existing slug; existing external links remain visible.
+4. Do not replace content/, images/, collection-index.json, GitHub workflows or settings data.
+5. CMS completion is an internal editable field, not a lock. Collection mode shows it as a column; legacy mode shows it inside each project.
 Upload: https://github.com/ahedagmar/ahedagmar.github.io/upload/main
+CMS config: https://github.com/ahedagmar/ahedagmar.github.io/edit/main/.pages.yml
+CMS: https://app.pagescms.org/ahedagmar/ahedagmar.github.io/main
 Actions: https://github.com/ahedagmar/ahedagmar.github.io/actions
-Website: https://ahedagmar.github.io/
+Site: https://ahedagmar.github.io/

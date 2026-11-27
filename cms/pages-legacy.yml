@@ -25,6 +25,7 @@ content:
   - name: short_bio
     type: text
     label: HOME — short biography
+    description: Email addresses and @Instagram handles become underlined links automatically.
   - name: works_heading
     type: string
     label: Homepage project list heading (Here)
@@ -42,6 +43,14 @@ content:
     label: Selected
     type: boolean
     default: true
+  - name: content_review
+    type: select
+    label: CMS completion (internal)
+    default: To finish
+    options:
+      values:
+      - To finish
+      - Complete ✓
   - name: title
     type: string
     required: true
@@ -65,7 +74,19 @@ content:
   - name: dimensions
     type: string
   - name: status
-    type: string
+    type: select
+    options:
+      values:
+      - ''
+      - completed
+      - ongoing
+      - built
+      - unbuilt
+      - temporary
+      - research
+      - experimental
+      - proposal
+    description: Optional project status.
   - name: photography
     type: string
   - name: credits
@@ -74,6 +95,22 @@ content:
     type: text
   - name: external_link
     type: string
+    label: Existing link (legacy)
+    description: Existing link preserved. Add named links below.
+  - name: links
+    label: Links
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.name}'
+    fields:
+    - name: name
+      label: Link name
+      type: string
+    - name: url
+      label: URL
+      type: string
   - name: pdf
     type: file
   - name: cover
@@ -98,6 +135,7 @@ content:
     type: number
     label: Homepage priority
     default: 0
+    hidden: true
   - name: gallery
     type: object
     list:
@@ -136,7 +174,7 @@ content:
     hidden: true
   list: true
 - name: news
-  label: Updates
+  label: Exhibitions
   type: file
   path: content/news.json
   format: json
@@ -144,6 +182,7 @@ content:
   - name: title
     type: string
     required: true
+    label: Exhibition title
   - name: date
     type: date
   - name: description
@@ -177,6 +216,7 @@ content:
     type: string
   - name: cover
     type: image
+    label: Exhibition poster
   - name: gallery
     type: object
     list:
@@ -212,6 +252,23 @@ content:
     type: string
     label: YouTube URL (legacy)
     hidden: true
+  - name: associated_project
+    type: string
+    label: Associated project (optional)
+    description: Enter the exact project title or its existing slug.
+  - name: show_on_home
+    type: boolean
+    label: Show blue announcement on home
+    default: false
+  - name: announcement_size
+    type: select
+    label: Announcement size
+    default: medium
+    options:
+      values:
+      - small
+      - medium
+      - large
   list: true
 - name: notebook
   label: ¿? — Notebook
@@ -418,6 +475,7 @@ content:
     label: Home image count (0 = automatic)
     type: number
     default: 0
+    hidden: true
   - name: floating_question
     label: Floating question
     type: boolean
