@@ -113,6 +113,9 @@ content:
       - proposal
       - academic project
     description: Optional project status.
+  - name: exhibition_name
+    type: string
+    label: Exhibition name (optional)
   - name: location
     type: string
   - name: category
