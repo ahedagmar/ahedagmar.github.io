@@ -1,9 +1,8 @@
-V22 — Actualización sin sustituir contenidos.
-Sube index.html, style.css y script.js:
-https://github.com/ahedagmar/ahedagmar.github.io/upload/main
-En https://app.pagescms.org/ > Configuration, pega cms/pages-legacy.yml
-si usas Item 1, Item 2; usa cms/pages-collections.yml únicamente si ya
-funciona la estructura de colecciones independientes. No migres ahora.
-No reemplaces content, images ni collection-index.json.
-https://github.com/ahedagmar/ahedagmar.github.io/actions
-https://ahedagmar.github.io/
+Portfolio v23 – update only
+Replace index.html, style.css and script.js in the root of your repository.
+Do NOT delete or replace content/, images/, collection-index.json, .pages.yml or GitHub workflows.
+No CMS configuration changes required.
+Repository: https://github.com/ahedagmar/ahedagmar.github.io
+Upload: https://github.com/ahedagmar/ahedagmar.github.io/upload/main
+Actions: https://github.com/ahedagmar/ahedagmar.github.io/actions
+Website: https://ahedagmar.github.io/
