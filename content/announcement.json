@@ -1,9 +1,4 @@
 {
-  "published": true,
-  "size": "M",
-  "title": "NEW EXHIBition",
-  "date": "34.-68 sep",
-  "description": "asfdlñkfsd\nsadfñkasdlñkasd\nsdflñkñfsdsad",
-  "cover": "/images/Captura de pantalla 2025-07-07 003107.png",
-  "hover_cover": "/images/Captura de pantalla 2025-06-30 174343.png"
+  "published": false,
+  "size": "M"
 }
