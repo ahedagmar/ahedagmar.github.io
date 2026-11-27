@@ -1,6 +1,15 @@
 {
   "portrait": "/images/Captura de pantalla 2026-11-26 223826.png",
-  "short_bio": "chilean artist based in Düsseldorf\nahe.dagmar@gmail.com\nig @dagmar.ahe",
+  "short_bio": "chilean artist based in Düsseldorf",
   "works_heading": "Here",
-  "portrait_size": "M"
+  "portrait_size": "M",
+  "additional_info": [
+    {
+      "name": "ahe.dagmar@gmail.com"
+    },
+    {
+      "name": "@dagmar.ahe",
+      "url": "https://www.instagram.com/dagmar.ahe/"
+    }
+  ]
 }
